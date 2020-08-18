@@ -1,0 +1,66 @@
+%\subsection*{Anhang}\label{anhang}
+
+%Um im Inhaltsverzeichnis einen Eintrag zu erzeugen
+%\section*{Anhangsverzeichnis}
+
+\appendix
+\renewcommand*{\thesection}{A\arabic{section}}
+% Set the name for the list of appenices
+\newcommand\listoftoaname{Anhang}
+
+% force table of contents to load the list of appendices
+\let\oldlistoftoc\listoftoc
+\renewcommand\listoftoc[1]{\oldlistoftoc{toa}}
+\tableofcontents
+\let\listoftoc\oldlistoftoc  
+% we will now redefine the sectioning commands so that that put entries
+% into the list of appendices. The redefinitions are rather simplistic
+% and break the starred versions and the optional argument.
+% Thus the redefinitions have to be added after the \tableofcontents call.
+
+\let\oldaddcontentsline\addcontentsline
+\newcommand\hackedaddcontentsline[3]{\oldaddcontentsline{toa}{#2}{#3}}
+
+\let\oldsection\section
+\renewcommand*\section[1]{%
+	\let\addcontentsline\hackedaddcontentsline%
+	\oldsection{#1}%
+	\let\addcontentsline\oldaddcontentsline%
+}
+
+\let\oldsubsection\subsection
+\renewcommand*\subsection[1]{%
+	\let\addcontentsline\hackedaddcontentsline%
+	\oldsubsection{#1}%
+	\let\addcontentsline\oldaddcontentsline%
+}
+
+\let\oldsubsubsection\subsubsection
+\renewcommand*\subsubsection[1]{%
+	\let\addcontentsline\hackedaddcontentsline%
+	\oldsubsubsection{#1}%
+	\let\addcontentsline\oldaddcontentsline%
+}
+
+\newpage
+
+%REFERENZEN kontrollieren
+\begin{appendix}
+
+	\section{Interviews}\label{Interviews_Anhang}
+	\addcontentsline{toc}{section}{A. Interviews}
+	\input{anhaenge/interviews/datenschutz.tex}
+	\newpage
+	\input{anhaenge/interviews/rechtlich.tex}
+	\newpage	
+
+	\section{Abbildungen}
+	\addcontentsline{toc}{section}{B. Abbildungen}
+	\input{anhaenge/abbildungen/abbildungen}
+	\newpage	
+	\section{Tabellen}
+	\addcontentsline{toc}{section}{C. Tabellen}
+	\input{anhaenge/tabellen/tabellen}
+	\newpage
+	
+\end{appendix}
