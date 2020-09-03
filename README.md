@@ -17,7 +17,7 @@
 ## LaTeX-Editor
 
 Personally i like to use [Code-OSS](https://github.com/Microsoft/vscode) with the [LaTeX Workshop Extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
-\\
+
 Other editors:
   - [TeXmaker](http://www.xm1math.net/texmaker/)
   - [TeXnicCenter](http://www.texniccenter.org/)
