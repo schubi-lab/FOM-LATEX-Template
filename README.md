@@ -1,5 +1,5 @@
 # A template for written papers and prasentations
-**This is not the offical FOM template!!**
+**This is not! the offical [FOM](https://www.fom.de/) template!**
 
 ## Contents!
 
@@ -14,9 +14,22 @@
 | Mac | http://www.tug.org/mactex/ |
 | Windows | [MiKTeX](https://miktex.org/) or [proTeXt](http://www.tug.org/protext/) or [TeX Live](http://www.tug.org/texlive/) |
 
+## LaTeX-Editor
+
+Personally i like to use [Code-OSS](https://github.com/Microsoft/vscode) with the [LaTeX Workshop Extension](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
+\\
+Other editors:
+  - [TeXmaker](http://www.xm1math.net/texmaker/)
+  - [TeXnicCenter](http://www.texniccenter.org/)
+  - [LyX](https://www.lyx.org/Home)
+  - [Texstudio](http://texstudio.sourceforge.net/)
+  - [TeXworks](https://www.tug.org/texworks/)
+  - etc.
+
+
 ## Reference Manager
 
-Everyone that knows how to handle a .bib-file.
+Every reference manager that knows how to handle a .bib-file.
 Personally i use [JabRef](https://www.jabref.org/#); open-source, cross-platform citation and reference management tool.
 
 ## Todos

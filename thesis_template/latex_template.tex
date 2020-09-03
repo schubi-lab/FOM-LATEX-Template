@@ -3,137 +3,73 @@
 %	schubilab@gmail.com
 
 
-
 % Festlegung des Allgemeinen Dokumentenformats
 \documentclass[a4paper,12pt,headsepline]{scrartcl}
 \usepackage{scrhack}
-
-
-
-
-
 \usepackage[a4paper, left=4cm, right=2cm, top=4cm, bottom=2cm]{geometry}
-
-
-
-
-% Umlaute unter UTF8 nutzen
+\usepackage[scaled=0.90]{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{courier}
 \usepackage[utf8]{inputenc}
-
-% Variablen
-\input{latex_einstellungen/variablen}
-
-% weitere Pakete
-% Grafiken aus PNG Dateien einbinden
 \usepackage{graphicx}
-
-% Deutsche Sonderzeichen und Silbentrennung nutzen
 \usepackage[ngerman]{babel}
-
-% Eurozeichen einbinden
 \usepackage[right]{eurosym}
-
-
 \usepackage{mathptmx}
-
 \usepackage{float}
-
-% mehrseitige Tabellen ermöglichen
 \usepackage{longtable}
-
-
-
-% Paket für Boxen im Text
 \usepackage{fancybox}
 \usepackage{lscape}
-% "Drehen" ganzer Seiten
 \usepackage{pdflscape}
-
-
-% bricht lange URLs "schön" um
 \usepackage[hyphens,obeyspaces,spaces]{url}
-
-% Paket für Textfarben
 \usepackage{color}
-
-% Mathematische Symbole importieren
 \usepackage{amssymb}
-
-\usepackage[pdftex,
-bookmarksnumbered,
-pdfauthor={Felix Schubert},
-pdftitle={Der Bereitstellungsprozess einer digitalen Bauakteneinsicht},
-pdfsubject={Bachelor-Thesis},
-hyperfootnotes=false]{hyperref}
-
-\hypersetup{colorlinks, citecolor=black, linkcolor= black, urlcolor=black}
-
-
-% neue Kopfzeilen mit fancypaket
-\usepackage{fancyhdr} %Paket laden
-\pagestyle{fancy} %eigener Seitenstil
-\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
-\fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
-\fancyhead[C]{} %zentrierte Kopfzeile
-\fancyhead[R]{\thepage} %Kopfzeile rechts
-\renewcommand{\headrulewidth}{0.4pt} %obere Trennlinie
-
-% für Tabellen
+\usepackage{fancyhdr} 
 \usepackage{array}
-
 \usepackage{multibib}
+\usepackage{mathptmx}
+\usepackage{multirow}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{xparse}
+\usepackage{lineno}
+\usepackage{courier}
+\usepackage{paralist}
+\usepackage[htt]{hyphenat}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{capt-of}
+\usepackage{makeidx}
+\usepackage{pdfpages}
+\usepackage{listings}
+\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, keywordstyle=\color{black}\bfseries, stringstyle=\ttfamily,showstringspaces=false,basicstyle=\footnotesize,captionpos=b}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[german]{nomencl}
+\let\abbrev\nomenclature
+\usepackage{silence}
+\WarningsOff
+
+
 \newcites{online}{Internetquellen}
 
-\usepackage{mathptmx}
-\usepackage[scaled=0.90]{helvet}
-% Für pixelige Überschriften 
-\usepackage{courier}
-\usepackage[T1]{fontenc}
-
-\usepackage{multirow}
-
-\usepackage{microtype}
-
-\usepackage{booktabs}
-%\usepackage[table]{xcolor}
-\usepackage[table,xcdraw]{xcolor}
-
-\usepackage{rotating}
-
-\usepackage{caption}
-
-
+\pagestyle{fancy} 
+\fancyhf{} 
+\fancyhead[L]{\nouppercase{\leftmark}} 
+\fancyhead[C]{} 
+\fancyhead[R]{\thepage} 
+\renewcommand{\headrulewidth}{0.4pt} 
 
 \hbadness=10000
 \hfuzz=\maxdimen
 \newcount\hbadness
 \newdimen\hfuzz
-
-%\usepackage{enumitem}
-
-% Zeilenabstand 1,5-zeilig
-%-----------------------------------
-\usepackage{setspace}
-\onehalfspacing
-
-%-----------------------------------
-% Absätze durch eine neue Zeile
-%-----------------------------------
 \setlength{\parindent}{0mm}
 \setlength{\parskip}{0.8em plus 0.5em minus 0.3em}
 
-%--------------Für die Transkription---------------------
-\usepackage{xparse}
-
-\usepackage{lineno}
-\usepackage{courier}
-\usepackage{paralist}
-\usepackage[htt]{hyphenat}
-
-
-
 \newlength{\transcriptlen}
-
 \NewDocumentCommand {\setspeaker} { mo } {%
 	\IfNoValueTF{#2}
 	{\expandafter\newcommand\csname#1\endcsname{\item[#1:]}}%
@@ -143,146 +79,85 @@ hyperfootnotes=false]{hyperref}
 	{\settowidth{\transcriptlen}{#2}}%
 }
 
-
-% ADD FELIX
-
-\usepackage{tabularx}
-
-% Schaltet den zusätzlichen Zwischenraum ab, den LaTeX normalerweise nach einem Satzzeichen einfügt.
-%\frenchspacing
-
-% Paket für Zeilenabstand
-\usepackage{setspace}
-
-% für Bildbezeichner
-\usepackage{capt-of}
-
-% für Stichwortverzeichnis
-\usepackage{makeidx}
-
-% Für das PDF-Titelblatt der FOM
-
-\usepackage{pdfpages}
-
-% für Listings
-\usepackage{listings}
-\lstset{numbers=left, numberstyle=\tiny, numbersep=5pt, keywordstyle=\color{black}\bfseries, stringstyle=\ttfamily,showstringspaces=false,basicstyle=\footnotesize,captionpos=b}
-\lstset{language=java}
-
-% Indexerstellung
 \makeindex
 
-% Abkürzungsverzeichnis
-\usepackage[german]{nomencl}
-\let\abbrev\nomenclature
-
-% Abkürzungsverzeichnis LiveTex Version
-% Titel des Abkürzungsverzeichnisses
 \renewcommand{\nomname}{Abkürzungsverzeichnis}
-% Abstand zwischen Abkürzung und Erläuterung
 \setlength{\nomlabelwidth}{.25\textwidth}
-% Zwischenraum zwischen Abkürzung und Erläuterung mit Punkten
 \renewcommand{\nomlabel}[1]{#1 \dotfill}
-% Variation des Abstandes der einzelnen Abkürzungen zu einander
 \setlength{\nomitemsep}{-\parsep}
-% Index mit Abkürzungen erzeugen
 \makenomenclature
 
-% Einzelne Zeilen am Ende einer Seite unterdrücken (Hurenkinder)
  \widowpenalty = 10000
- \displaywidowpenalty = 10000
+ \displaywidowpenalty = 1000
+
+\usepackage[pdftex,
+bookmarksnumbered,
+pdfauthor={Felix Schubert},
+pdftitle={Der Bereitstellungsprozess einer digitalen Bauakteneinsicht},
+pdfsubject={Bachelor-Thesis},
+hyperfootnotes=false]{hyperref}
+\hypersetup{colorlinks, citecolor=black, linkcolor= black, urlcolor=black}
+
+
 
 
 \begin{document}
+
 % hier werden die Trennvorschläge inkludiert
 \input{latex_einstellungen/trennung}
 
 \newpage
 
-% Titelseite %
-%\input{latex_einstellungen/deckblatt}
 
 %FOM_Titelseite
 \thispagestyle{empty}
 
 \includepdf{titelblatt/Muster-Deckblatt-Arbeit}
 
-% römische Numerierung am Anfang
+
 \pagenumbering{Roman}
 \setcounter{page}{2}
-
-% 1.5 facher Zeilenabstand
 \onehalfspacing
 
-% Sperrvermerk
-% \input{00_rand_data/sperrvermerk}
 \thispagestyle{empty}
-
 \includepdf{latex_einstellungen/sperrvermerk}
 \newpage
-
-
 
 % Einleitung / Abstract
 \input{latex_einstellungen/abstract}
 
-% einfacher Zeilenabstand
+
 \singlespacing
-
-% Inhaltsverzeichnis anzeigen
 \newpage
+
 \tableofcontents
-
-
-
-% das Abbildungsverzeichnis
 \newpage
-% Abbildungsverzeichnis soll im Inhaltsverzeichnis auftauchen
+
 \phantomsection
 \addcontentsline{toc}{section}{Abbildungsverzeichnis}
-% Verion 1: Abbildungsverzeichnis MIT führender Nummberierung endgueltig anzeigen
 \listoffigures
-
-% Tabellenverzeichnis soll im Inhaltsverzeichnis auftauchen
 \phantomsection
 \addcontentsline{toc}{section}{Tabellenverzeichnis}
-% \fancyhead[L]{Abbildungsverzeichnis / Abkürzungsverzeichnis} %Kopfzeile links
-% Tabellenverzeichnis endgültig anzeigen
 \listoftables
-
-% das Listingverzeichnis
-%\newpage
-% Listingverzeichnis soll im Inhaltsverzeichnis auftauchen
 \phantomsection
 \addcontentsline{toc}{section}{Listingverzeichnis}
-\fancyhead[L]{Abbildungs-, Tabellen- und Listingverzeichnis} %Kopfzeile links
+\fancyhead[L]{Abbildungs-, Tabellen- und Listingverzeichnis} 
 \renewcommand{\lstlistlistingname}{Listingverzeichnis}
 \lstlistoflistings
-%%%%
-
-% das Abkürzungsverzeichnis
 \newpage
-% Abkürzungsverzeichnis soll im Inhaltsverzeichnis auftauchen
 \phantomsection
 \addcontentsline{toc}{section}{Abkürzungsverzeichnis}
-% das Abkürzungsverzeichnis entgültige Ausgeben
-\fancyhead[L]{Abkürzungsverzeichnis} %Kopfzeile links
+\fancyhead[L]{Abkürzungsverzeichnis} 
 \input{latex_einstellungen/abkuezungen/abkuerzungen}
 \printnomenclature[3cm]
 
 
 %%%%%%% EINLEITUNG %%%%%%%%%%%%
 
-% Ab hier alles mit Arabischen Zahlen
-%\cleardoubleoddpage
 \clearpage
 \pagenumbering{arabic}
-%\setcounter{page}{1}
-
 \newpage
-\fancyhead[L]{\nouppercase{\leftmark}} %Kopfzeile links
-
-% 1,5 facher Zeilenabstand
+\fancyhead[L]{\nouppercase{\leftmark}} 
 \onehalfspacing
 
 % einzelne Abschnitte
@@ -300,35 +175,27 @@ hyperfootnotes=false]{hyperref}
 %..
 
 \singlespacing
-% Literaturliste soll im Inhaltsverzeichnis auftauchen
 \newpage
-
 \phantomsection
 \addcontentsline{toc}{section}{Literaturverzeichnis}
-% Literaturverzeichnis anzeigen
 \renewcommand\refname{Literaturverzeichnis}
-
 \bibliographystyle{alphadin_edit_fs}
 \bibliography{sources}
-
-
 \newpage
+
 \phantomsection
 \addcontentsline{toc}{section}{Internetquellen}
 \renewcommand\refname{Internetquellen}
-
 \bibliographystyleonline{alphadin_edit_fs}
 \bibliographyonline{online_sources}
-
 \onehalfspacing
-% evtl. Anhang
 \newpage
+
 \phantomsection
 \addcontentsline{toc}{section}{Anhang}
 \renewcommand\refname{Anhang}
-\fancyhead[L]{Anhang} %Kopfzeile links
+\fancyhead[L]{Anhang} 
 \input{anhaenge/anhang}
-
 \input{latex_einstellungen/ehrenwoertliche_erklaerung/last_page.tex}
 \mbox{}
 \end{document}
