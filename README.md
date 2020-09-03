@@ -21,14 +21,14 @@
 
 
 ### Todos
-
+ - Make the prasentation suitable for LibreOffice
  - Fix bugs
  - Add more documentation in code
 
 License
 ----
 
-[MIT](https://gitlab.com/schubilab/thesis-templates/LICENSE)
+[MIT](https://gitlab.com/schubilab/thesis-templates/-/blob/master/LICENSE)
 **Free Software, Hell Yeah!**
 
 
