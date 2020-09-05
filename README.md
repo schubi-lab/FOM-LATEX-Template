@@ -6,7 +6,7 @@
   - A [LaTeX Thesis Template](https://gitlab.com/schubilab/thesis-templates/-/tree/master/thesis_template)
   - A [Prasentation Template](https://gitlab.com/schubilab/thesis-templates/-/blob/master/praesentation_template/FOM_presentation_template.pptx)
 
-## Install LaTeX on Linux
+## Install LaTeX
 | Distro | Command/ Site with installation instructions |
 | ------ | ------ |
 | Arch | https://wiki.archlinux.org/index.php/TeX_Live |
@@ -42,6 +42,7 @@ Personally i use [JabRef](https://www.jabref.org/#); open-source, cross-platform
 ----
 
 [MIT](https://gitlab.com/schubilab/thesis-templates/-/blob/master/LICENSE)
+
 **Free Software, Hell Yeah!**
 
 

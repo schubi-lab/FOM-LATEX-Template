@@ -1,0 +1,19 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{Bspw.}]\begingroup Beispielsweise\nomeqref {0}\nompageref{1}
+  \item [{CSV}]\begingroup Comma Separated Values\nomeqref {0}\nompageref{1}
+  \item [{DAP}]\begingroup Datenaustauschplattform\nomeqref {0}\nompageref{1}
+  \item [{GPAM}]\begingroup Geschäftsprozess- und Anforderungsmanagement\nomeqref {0}\nompageref{1}
+  \item [{HTML}]\begingroup Hypertext Markup Language\nomeqref {0}\nompageref{1}
+  \item [{IT}]\begingroup Informationstechnik\nomeqref {0}\nompageref{1}
+  \item [{LBK}]\begingroup Lokalbaukommission\nomeqref {0}\nompageref{1}
+  \item [{LHM}]\begingroup Landeshauptstadt München\nomeqref {0}\nompageref{1}
+  \item [{ODS}]\begingroup OASIS OpenDocument\nomeqref {0}\nompageref{1}
+  \item [{PDF}]\begingroup Portable Document Format\nomeqref {0}\nompageref{1}
+  \item [{PLAN}]\begingroup Referat für Stadtplanung und Bauordnung\nomeqref {0}\nompageref{1}
+  \item [{SE}]\begingroup Systems Engineering\nomeqref {0}\nompageref{1}
+  \item [{VBS}]\begingroup Visual Basic Script\nomeqref {0}\nompageref{1}
+  \item [{ZR}]\begingroup Zentralregistratur\nomeqref {0}\nompageref{1}
+
+\end{thenomenclature}

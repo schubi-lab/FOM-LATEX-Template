@@ -2,6 +2,20 @@
 %	Felix Schubert
 %	schubilab@gmail.com
 
+% Die Quellen werden in zwei verschiedenen .bib-Dateien gespeichert, um so die Internetquellen
+% in einem eigenen Verzeichnis führen zu können.
+
+% Die Abkürzungen werden in "latex_einstellungen/akuerzungen/abkuerzungen.tex" geführt.
+% Um Veränderungen am Abkürzungsverzeichnis zu übernehmen folgenden Befehl im Terminal ausführen:
+% makeindex latex_template.nlo -s nomencl.ist -o latex_template.nls
+
+% Das Deckblatt kann einfach durch das Eigene ersetzt werden. Name muss gleich bleiben!
+
+% Das Template wird laufend verbessert und noch ausführlicher dokumentiert.
+% Bei Rückfragen und/ oder Verbesserungsvorschlägen gerne melden.
+
+
+
 
 % Festlegung des Allgemeinen Dokumentenformats
 \documentclass[a4paper,12pt,headsepline]{scrartcl}
@@ -113,7 +127,6 @@ hyperfootnotes=false]{hyperref}
 
 \includepdf{latex_einstellungen/Muster-Deckblatt-Arbeit}
 
-
 \pagenumbering{Roman}
 \setcounter{page}{2}
 \onehalfspacing
@@ -149,6 +162,7 @@ hyperfootnotes=false]{hyperref}
 \fancyhead[L]{Abkürzungsverzeichnis} 
 \input{latex_einstellungen/abkuezungen/abkuerzungen}
 \printnomenclature[3cm]
+
 
 
 %%%%%%% EINLEITUNG %%%%%%%%%%%%
