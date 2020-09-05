@@ -6,6 +6,11 @@
   - A [LaTeX Thesis Template](https://gitlab.com/schubilab/thesis-templates/-/tree/master/thesis_template)
   - A [Prasentation Template](https://gitlab.com/schubilab/thesis-templates/-/blob/master/praesentation_template/FOM_presentation_template.pptx)
 
+## Get files
+
+  - ```$ git clone https://gitlab.com/schubilab/thesis-templates.git``` or
+  - Release [Version_1.0](https://gitlab.com/schubilab/thesis-templates/-/releases/Version_1.0)
+
 ## Install LaTeX
 | Distro | Command/ Site with installation instructions |
 | ------ | ------ |
